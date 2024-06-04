@@ -1,4 +1,43 @@
 *{margin: 0; padding: 0;}
 
+/*-----===| GOOGLE FONTS |===----*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 /*-----===| VARIÁVEIS |===-----*/
-:root{}
+:root{
+    --azul-medio: rgb(66, 91, 146);
+    --sombra: rgba(0, 0, 0, 0.300);
+}
+
+/*-----===| HEADER |===-----*/
+/*---=| DISPLAY FLEX |=---*/
+header, main, .menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    height: 10vh;
+    width: 100%;
+    background-color: var(--sombra);
+    position: fixed;
+    justify-content: space-around;
+}
+
+.menu{
+    height: 100%;
+    width: 50%;
+    list-style: none;
+    justify-content: space-around;
+    font-family: "Outfit", sans-serif ;
+    font-weight: 600;
+    color: white;
+}
+
+/*-----===| MAIN |===-----*/
+main{
+    min-height: 150vh;
+    width: 100%;
+    background-color: var(--azul-medio);
+}
