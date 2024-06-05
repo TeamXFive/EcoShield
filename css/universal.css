@@ -3,15 +3,20 @@
 /*-----===| GOOGLE FONTS |===----*/
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-/*-----===| VARIÁVEIS |===-----*/
+/*-----===| ROOT |===-----*/
 :root{
+    /*---=| Variáveis |=---*/
     --azul-medio: rgb(66, 91, 146);
     --sombra: rgba(0, 0, 0, 0.300);
+
+    /*---=| Fonte Padrão |=---*/
+    font-family: "Outfit", sans-serif ;
+    font-weight: 600;
 }
 
 /*-----===| HEADER |===-----*/
 /*---=| DISPLAY FLEX |=---*/
-header, main, .menu{
+header, main, .logo-container, .menu, .menu-list-container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,17 +27,27 @@ header{
     width: 100%;
     background-color: var(--sombra);
     position: fixed;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
+/*---=| Left Header |=---*/
+.logo-container{
+    height: 100%;
+    width: 20%;
+}
+
+/*---=| Right Header |=---*/
 .menu{
     height: 100%;
-    width: 50%;
-    list-style: none;
-    justify-content: space-around;
-    font-family: "Outfit", sans-serif ;
-    font-weight: 600;
+    width: 80%;
     color: white;
+}
+
+.menu-list-container{
+    height: 100%;
+    width: 100%;
+    list-style: none;
+    justify-content: flex-start;
 }
 
 /*-----===| MAIN |===-----*/
