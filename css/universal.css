@@ -1,43 +1,45 @@
 *{margin: 0; padding: 0;}
 
 /*-----===| GOOGLE FONTS |===----*/
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-/*-----===| VARIÁVEIS |===-----*/
+/*-----===| ROOT |===-----*/
 :root{
+    /*---=| Variáveis |=---*/
     --azul-medio: rgb(66, 91, 146);
-    --sombra: rgba(0, 0, 0, 0.300);
+    --sombrear: rgba(0, 0, 0, 0.5);
+    --clarear: rgba(255, 255, 255, 0.5);
+
+    /*---=| Fonte Padrão |=---*/
+    font-family: "Lato", sans-serif ;
+    font-weight: 700;
+    font-style: bold;
 }
 
 /*-----===| HEADER |===-----*/
 /*---=| DISPLAY FLEX |=---*/
-header, main, .menu{
+header{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 header{
-    height: 10vh;
+    min-height: 80px;
+    height: 5vh;
     width: 100%;
-    background-color: var(--sombra);
+    background-color: var(--clarear);
     position: fixed;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-.menu{
-    height: 100%;
-    width: 50%;
-    list-style: none;
-    justify-content: space-around;
-    font-family: "Outfit", sans-serif ;
-    font-weight: 600;
-    color: white;
+/*---=| Left Header |=---*/
+/*---=| Right Header |=---*/
+.nav-pills{
+    margin-right: 5%;
 }
 
-/*-----===| MAIN |===-----*/
-main{
-    min-height: 150vh;
-    width: 100%;
-    background-color: var(--azul-medio);
+.nav-link{
+    color: black;
+    text-decoration: none;
 }

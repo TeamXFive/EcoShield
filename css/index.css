@@ -1,0 +1,29 @@
+/*-----===| MAIN |===-----*/
+/*---=| DISPLAY FLEX |=---*/
+main, .main-banner-container, .banner-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    width: 100%;
+    background-color: var(--azul-medio);
+    align-items: flex-start;
+}
+
+.main-banner-container{
+    height: 90vh;
+    width: 100%;
+}
+
+.banner-container{
+    height: 100%;
+    width: 100%;
+}
+
+.banner-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
