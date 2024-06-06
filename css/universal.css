@@ -1,58 +1,45 @@
 *{margin: 0; padding: 0;}
 
 /*-----===| GOOGLE FONTS |===----*/
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 /*-----===| ROOT |===-----*/
 :root{
     /*---=| Variáveis |=---*/
     --azul-medio: rgb(66, 91, 146);
-    --sombra: rgba(0, 0, 0, 0.300);
+    --sombrear: rgba(0, 0, 0, 0.5);
+    --clarear: rgba(255, 255, 255, 0.5);
 
     /*---=| Fonte Padrão |=---*/
-    font-family: "Outfit", sans-serif ;
-    font-weight: 600;
+    font-family: "Lato", sans-serif ;
+    font-weight: 700;
+    font-style: bold;
 }
 
 /*-----===| HEADER |===-----*/
 /*---=| DISPLAY FLEX |=---*/
-header, main, .logo-container, .menu, .menu-list-container{
+header{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 header{
-    height: 10vh;
+    min-height: 80px;
+    height: 5vh;
     width: 100%;
-    background-color: var(--sombra);
+    background-color: var(--clarear);
     position: fixed;
     justify-content: space-between;
 }
 
 /*---=| Left Header |=---*/
-.logo-container{
-    height: 100%;
-    width: 20%;
-}
-
 /*---=| Right Header |=---*/
-.menu{
-    height: 100%;
-    width: 80%;
-    color: white;
+.nav-pills{
+    margin-right: 5%;
 }
 
-.menu-list-container{
-    height: 100%;
-    width: 100%;
-    list-style: none;
-    justify-content: flex-start;
-}
-
-/*-----===| MAIN |===-----*/
-main{
-    min-height: 150vh;
-    width: 100%;
-    background-color: var(--azul-medio);
+.nav-link{
+    color: black;
+    text-decoration: none;
 }
