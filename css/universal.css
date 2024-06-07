@@ -10,8 +10,10 @@
 /*-----===| ROOT |===-----*/
 :root{
     /*---=| Variáveis |=---*/
+    --azul-super-claro: rgb(184, 227, 255);
     --azul-claro: rgb(92, 159, 204);
     --azul-medio: rgb(66, 91, 146);
+    --aqua-medio: rgb(0, 218, 218);
     --sombrear: rgba(0, 0, 0, 0.5);
     --clarear: rgba(255, 255, 255, 0.5);
     --clarear-gradiente: linear-gradient(90deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.5));
@@ -23,6 +25,7 @@ header{
     width: 100%;
     background: var(--clarear-gradiente);
     position: fixed;
+    z-index: 999;
 }
 
 /*---=| Left Header |=---*/
