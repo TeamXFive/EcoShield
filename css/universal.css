@@ -1,45 +1,53 @@
-*{margin: 0; padding: 0;}
+*{
+    margin: 0;
+    padding: 0;
 
-/*-----===| GOOGLE FONTS |===----*/
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    /*---=| Fonte Padrão |=---*/
+    font-family: "Josefin Sans", sans-serif ;
+    font-weight: 700;
+}
 
 /*-----===| ROOT |===-----*/
 :root{
     /*---=| Variáveis |=---*/
+    --azul-claro: rgb(92, 159, 204);
     --azul-medio: rgb(66, 91, 146);
     --sombrear: rgba(0, 0, 0, 0.5);
     --clarear: rgba(255, 255, 255, 0.5);
-
-    /*---=| Fonte Padrão |=---*/
-    font-family: "Lato", sans-serif ;
-    font-weight: 700;
-    font-style: bold;
+    --clarear-gradiente: linear-gradient(90deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.5));
 }
 
 /*-----===| HEADER |===-----*/
 /*---=| DISPLAY FLEX |=---*/
 header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-header{
-    min-height: 80px;
-    height: 5vh;
     width: 100%;
-    background-color: var(--clarear);
+    background: var(--clarear-gradiente);
     position: fixed;
-    justify-content: space-between;
 }
 
 /*---=| Left Header |=---*/
+.left-header{ margin-left: 5%; }
+
+/*-| Logo Name |-*/
+.logo-name-eco, .logo-name-shield{ font-size: 32px; }
+.logo-name-eco{ color: var(--azul-claro); }
+
 /*---=| Right Header |=---*/
-.nav-pills{
-    margin-right: 5%;
-}
+.right-header{ margin-right: 5%; }
 
 .nav-link{
     color: black;
     text-decoration: none;
+    font-size: 16px;
+}
+
+/*-----===| EFEITOS |===-----*/
+/*---=| Hover |=---*/
+.nav-link:hover{ color: var(--azul-claro); }
+
+/*-----===| RESPONSIVIDADE |===-----*/
+/*---=| HEADER |=---*/
+@media (max-width: 767px) {
+    .left-header{ margin-left: 0; }
+    .right-header{ margin-right: 0; }
 }
