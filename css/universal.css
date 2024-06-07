@@ -17,6 +17,7 @@
     --sombrear: rgba(0, 0, 0, 0.5);
     --clarear: rgba(255, 255, 255, 0.5);
     --clarear-gradiente: linear-gradient(90deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.5));
+    --azul-claro-gradiente: linear-gradient(90deg, transparent, var(--azul-super-claro));
 }
 
 /*-----===| HEADER |===-----*/
