@@ -1,14 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
 
     /*---=| Fonte Padrão |=---*/
-    font-family: "Josefin Sans", sans-serif ;
+    font-family: "Josefin Sans", sans-serif;
     font-weight: 700;
 }
 
 /*-----===| ROOT |===-----*/
-:root{
+:root {
     /*---=| Variáveis |=---*/
     --azul-claro: rgb(92, 159, 204);
     --azul-medio: rgb(66, 91, 146);
@@ -19,23 +19,33 @@
 
 /*-----===| HEADER |===-----*/
 /*---=| DISPLAY FLEX |=---*/
-header{
+header {
     width: 100%;
     background: var(--clarear-gradiente);
     position: fixed;
 }
 
 /*---=| Left Header |=---*/
-.left-header{ margin-left: 5%; }
+.left-header {
+    margin-left: 5%;
+}
 
 /*-| Logo Name |-*/
-.logo-name-eco, .logo-name-shield{ font-size: 32px; }
-.logo-name-eco{ color: var(--azul-claro); }
+.logo-name-eco,
+.logo-name-shield {
+    font-size: 32px;
+}
+
+.logo-name-eco {
+    color: var(--azul-claro);
+}
 
 /*---=| Right Header |=---*/
-.right-header{ margin-right: 5%; }
+.right-header {
+    margin-right: 5%;
+}
 
-.nav-link{
+.nav-link {
     color: black;
     text-decoration: none;
     font-size: 16px;
@@ -43,11 +53,26 @@ header{
 
 /*-----===| EFEITOS |===-----*/
 /*---=| Hover |=---*/
-.nav-link:hover{ color: var(--azul-claro); }
+.nav-link:hover {
+    color: var(--azul-claro);
+}
 
 /*-----===| RESPONSIVIDADE |===-----*/
 /*---=| HEADER |=---*/
 @media (max-width: 767px) {
-    .left-header{ margin-left: 0; }
-    .right-header{ margin-right: 0; }
+    .left-header {
+        margin-left: 0;
+    }
+
+    .right-header {
+        margin-right: 0;
+    }
+}
+
+.blue-text {
+    color: var(--azul-claro);
+}
+
+a {
+    color: var(--azul-claro);
 }
