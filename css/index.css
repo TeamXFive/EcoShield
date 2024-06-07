@@ -22,9 +22,8 @@ main,
 }
 
 main {
-    min-height: 150vh;
     width: 100%;
-    background-color: var(--azul-medio);
+    flex-direction: column;
     align-items: flex-start;
     z-index: 100;
 }
@@ -104,6 +103,10 @@ main {
         font-size: 64px;
     }
 
+    .btn-contact-container{
+        transform: translateX(-100%);
+    }
+
     .btn-contact {
         font-size: 14px;
     }
@@ -117,6 +120,10 @@ main {
     .banner-text-title {
         width: 80%;
         font-size: 48px;
+    }
+
+    .btn-contact-container{
+        transform: translateX(-80%);
     }
 
     .btn-contact {
