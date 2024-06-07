@@ -1,33 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    /*---=| Fonte Padrão |=---*/
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+}
+
 /*-----===| MAIN |===-----*/
 /*---=| DISPLAY FLEX |=---*/
 main,
 .main-banner-container,
-.banner-container {
+.banner-image-container,
+.banner-text-container,
+.banner-text-title,
+.btn-contact-container,
+.btn-contact {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 main {
+    min-height: 150vh;
     width: 100%;
     background-color: var(--azul-medio);
     align-items: flex-start;
+    z-index: 100;
 }
 
+/*---=| BANNER |=---*/
 .main-banner-container {
     height: 90vh;
     width: 100%;
+    flex-wrap: wrap;
 }
 
-.banner-container {
+/*-| Imagem |-*/
+.banner-image-container {
     height: 100%;
     width: 100%;
+    margin: 0;
 }
 
-.banner-container img {
+.banner-image-container img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+/*-| Texto |-*/
+.banner-text-container {
+    height: 90%;
+    width: 90%;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    color: white;
+    transform: translateY(-100%);
+}
+
+.banner-text-title {
+    width: 80%;
+    align-items: flex-end;
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.btn-contact-container {
+    height: 80%;
+    width: 100%;
+    position: relative;
+    align-items: flex-end;
+    transform: translateX(-80%);
+}
+
+.btn-contact {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 2em;
+    background-color: var(--aqua-medio);
+    color: var(--azul-medio);
+    transition: .1s all ease-in-out;
+    font-size: 16px;
+}
+
+/*-----===| EFEITOS |===-----*/
+/*---=| Hover |=---*/
+.btn-contact:hover {
+    transform: scale(1.05);
+}
+
+/*-----===| RESPONSIVIDADE |===-----*/
+/*---=| BanneBanner |=---*/
+@media (max-width: 1200px) {
+    .main-banner-container {
+        height: 75vh;
+    }
+
+    .banner-text-title {
+        width: 100%;
+        font-size: 64px;
+    }
+
+    .btn-contact {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-banner-container {
+        height: 50vh;
+    }
+
+    .banner-text-title {
+        width: 80%;
+        font-size: 48px;
+    }
+
+    .btn-contact {
+        font-size: 12px;
+    }
 }
 
 .video-pitch {
