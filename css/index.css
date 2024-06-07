@@ -50,7 +50,6 @@ main {
 
 /*-| Texto |-*/
 .banner-text-container {
-    height: 90%;
     width: 90%;
     position: relative;
     flex-direction: column;
@@ -85,6 +84,12 @@ main {
     font-size: 16px;
 }
 
+.video-pitch {
+    min-width: 50vw;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
 /*-----===| EFEITOS |===-----*/
 /*---=| Hover |=---*/
 .btn-contact:hover {
@@ -100,7 +105,7 @@ main {
 
     .banner-text-title {
         width: 100%;
-        font-size: 64px;
+        font-size: 48px;
     }
 
     .btn-contact-container{
@@ -119,7 +124,7 @@ main {
 
     .banner-text-title {
         width: 80%;
-        font-size: 48px;
+        font-size: 32px;
     }
 
     .btn-contact-container{
@@ -131,8 +136,9 @@ main {
     }
 }
 
-.video-pitch {
-    min-width: 50vw;
-    height: auto;
-    aspect-ratio: 16/9;
+@media (max-width: 576px) {
+    .banner-text-title {
+        width: 100%;
+        font-size: 24px;
+    }
 }
