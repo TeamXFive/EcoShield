@@ -29,6 +29,10 @@ header {
     z-index: 999;
 }
 
+main {
+    min-height: calc(100vh - 72px);
+}
+
 /*---=| Left Header |=---*/
 .left-header {
     margin-left: 5%;
