@@ -84,6 +84,11 @@ main {
     font-size: 16px;
 }
 
+/*---=| Video Pitch |=---*/
+.blue-text a{
+    text-decoration: none;
+}
+
 .video-pitch {
     min-width: 50vw;
     height: auto;
