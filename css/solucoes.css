@@ -9,16 +9,47 @@
 
 /*-----===| MAIN |===-----*/
 /*---=| DISPLAY FLEX |=---*/
-main {
+main,
+#ecoshield-charts-container,
+.charts-chart-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
 main {
     width: 100%;
+    position: relative;
     flex-direction: column;
     align-items: flex-start;
     z-index: 100;
+}
+
+/*---=| EcoShield Charts |=---*/
+#ecoshield-charts-container {
+    height: 60vh;
+    width: 100%;
+}
+
+.charts-chart-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+}
+
+.infogram-embed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%!important;
+    aspect-ratio: 1 / 1;
+}
+
+.infogram-embed iframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%!important;
+    aspect-ratio: 1 / 1;
 }
