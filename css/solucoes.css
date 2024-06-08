@@ -62,3 +62,32 @@ main {
         }
     }
 }
+
+/*---=| EcoShield Charts |=---*/
+#ecoshield-charts-container {
+    height: 60vh;
+    width: 100%;
+}
+
+.charts-chart-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+}
+
+.infogram-embed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%!important;
+    aspect-ratio: 1 / 1;
+}
+
+.infogram-embed iframe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%!important;
+    aspect-ratio: 1 / 1;
+}
