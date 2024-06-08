@@ -66,6 +66,15 @@ main {
     font-weight: 700;
 }
 
+.banner-text-paragraph{
+    font-size: 20px;
+    color: var(--azul-super-claro);
+}
+
+.span-decoration{
+    color: var(--azul-claro);
+}
+
 .btn-contact-container {
     height: 80%;
     width: 100%;
@@ -73,6 +82,7 @@ main {
     align-items: flex-end;
     transform: translateX(-80%);
 }
+
 
 .btn-contact {
     padding: 1em 2em;
