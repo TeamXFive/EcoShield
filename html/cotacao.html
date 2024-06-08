@@ -39,6 +39,16 @@
     <link rel="stylesheet" href="../css/universal.css" />
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/sobre.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css"
+    />
+    <style>
+      #map {
+        height: 400px;
+      }
+    </style>
   </head>
 
   <body>
@@ -64,230 +74,133 @@
     </header>
 
     <main>
-      <article class="main-banner-container">
-        <figure class="banner-image-container">
-          <video
-            src="../assets/video/about-us-people-working.mp4"
-            loop
-            autoplay
-            muted
-            loading="lazy"
-            alt="People working in the office with a blurred overlay."
-          ></video>
-        </figure>
-
-        <section class="banner-text-container">
-          <div class="banner-text-title">
-            <span class>Quem somos</span>
+      <div class="container mt-5">
+        <div class="row mb-4">
+          <div class="col text-center">
+            <h1>Faça sua cotação</h1>
+            <p class="lead">
+              Selecione o local que deseja monitorar e o que você deseja
+              monitorar:
+            </p>
           </div>
-        </section>
-      </article>
-
-      <article class="container mb-5">
-        <!-- ABOUT US START -->
-
-        <section class="py-3 py-md-5">
-          <div class="container">
-            <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-top">
-              <div class="col-12 col-lg-6 col-xl-5">
-                <img
-                  class="img-fluid"
-                  loading="lazy"
-                  src="../assets/img/about-us.jpg"
-                  alt="About Us"
-                />
+        </div>
+        <div class="row">
+          <div class="col-lg-8 mb-4">
+            <div id="map" class="rounded shadow"></div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <div class="mb-3">
+                  <label for="areaSlider" class="form-label"
+                    >Área a ser monitorada (km²):
+                    <span id="areaValue">10</span></label
+                  >
+                  <input
+                    type="range"
+                    class="form-range"
+                    min="1"
+                    max="100"
+                    id="areaSlider"
+                    value="10"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="droneSlider" class="form-label"
+                    >Número de drones: <span id="droneValue">1</span></label
+                  >
+                  <input
+                    type="range"
+                    class="form-range"
+                    min="1"
+                    max="20"
+                    id="droneSlider"
+                    value="1"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Tipos de dados a monitorar:</label>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input dataCheckbox"
+                      type="checkbox"
+                      value="550"
+                      id="waterData"
+                      checked
+                      disabled
+                    />
+                    <label class="form-check-label" for="waterData"
+                      >Dados da água</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input dataCheckbox"
+                      type="checkbox"
+                      value="500"
+                      id="invasiveSpecies"
+                    />
+                    <label class="form-check-label" for="invasiveSpecies"
+                      >Espécies invasoras</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input dataCheckbox"
+                      type="checkbox"
+                      value="600"
+                      id="waterPollution"
+                    />
+                    <label class="form-check-label" for="waterPollution"
+                      >Poluição da água
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input dataCheckbox"
+                      type="checkbox"
+                      value="700"
+                      id="humanIntervention"
+                    />
+                    <label class="form-check-label" for="humanIntervention"
+                      >Intervenção humana
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input dataCheckbox"
+                      type="checkbox"
+                      value="400"
+                      id="trash"
+                    />
+                    <label class="form-check-label" for="trash"
+                      >Lixo/dejetos</label
+                    >
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="durationSlider" class="form-label"
+                    >Duração do monitoramento (meses):
+                    <span id="durationValue">1</span></label
+                  >
+                  <input
+                    type="range"
+                    class="form-range"
+                    min="1"
+                    max="12"
+                    id="durationSlider"
+                    value="1"
+                  />
+                </div>
+                <h3 class="text-center">
+                  Custo mensal aproximado: <br />
+                  R$ <span id="totalCost">0</span>
+                </h3>
               </div>
-              <div class="col-12 col-lg-6 col-xl-7">
-                <div class="row justify-content-xl-center">
-                  <div class="col-12 col-xl-11">
-                    <h2 class="mb-3">
-                      Na <span class="blue-text">Eco</span>Shield
-                    </h2>
-                    <p class="lead fs-4 text-secondary mb-3">
-                      Ajudamos a conservar e proteger os ecossistemas marinhos
-                      através do uso de tecnologias avançadas, monitorando,
-                      detectando e mitigando ameaças à biodiversidade oceânica.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <hr class="featurette-divider my-5" />
-
-              <h3 class="mb-5">
-                Como o <span class="blue-text">Eco</span>Shield funciona
-              </h3>
-
-              <!-- OUR FEATURES START -->
-              <div class="row gy-4 gy-md-0 gx-xxl-5X">
-                <div class="col-12 col-md-3">
-                  <div class="d-flex">
-                    <div>
-                      <h4 class="h5 mb-3">Monitoramento Contínuo</h4>
-                      <p class="text-secondary mb-0">
-                        Rede de drones subaquáticos que monitoram a saúde dos
-                        ecossistemas em tempo real.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-3">
-                  <div class="d-flex">
-                    <div>
-                      <h4 class="h5 mb-3">Detecção de Ameaças</h4>
-                      <p class="text-secondary mb-0">
-                        Identificação de espécies invasoras, poluição,
-                        alterações na qualidade da água e mudanças ambientais.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-3">
-                  <div class="d-flex">
-                    <div>
-                      <h4 class="h5 mb-3">Relatórios Detalhados</h4>
-                      <p class="text-secondary mb-0">
-                        Fornecemos análises para decisões informadas e ações
-                        preventivas.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-3">
-                  <div class="d-flex">
-                    <div>
-                      <h4 class="h5 mb-3">Alertas Automatizados</h4>
-                      <p class="text-secondary mb-0">
-                        Emitimos alertas imediatos para autoridades em casos de
-                        atividades ilegais.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- FEATURES DIVIDER -->
-              <div class="my-4"></div>
-
-              <div class="row gy-4 gy-md-0 gx-xxl-5X">
-                <div class="col-12 col-md-3">
-                  <div class="d-flex">
-                    <div>
-                      <h2 class="h5 mb-3">Plataforma MaaS</h2>
-                      <p class="text-secondary mb-0">
-                        Oferecemos um painel de monitoramento em tempo real como
-                        serviço para governos, ONGs e empresas.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-3">
-                  <div class="d-flex">
-                    <div>
-                      <h2 class="h5 mb-3">Alocação de drones</h2>
-                      <p class="text-secondary mb-0">
-                        Fazemos a alocação sob demanda de nossos drone em
-                        localizações específicas a pedido de clientes.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-3">
-                  <div class="d-flex">
-                    <div>
-                      <h2 class="h5 mb-3">Parcerias Estratégicas</h2>
-                      <p class="text-secondary mb-0">
-                        Colaboramos com diversas entidades para fortalecer
-                        nossas iniciativas de conservação.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-3">
-                  <div class="d-flex">
-                    <div>
-                      <h2 class="h5 mb-3">Consultoria Ambiental</h2>
-                      <p class="text-secondary mb-0">
-                        Ajudamos na elaboração de estratégias de conservação e
-                        conformidade regulatória.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- OUR FEATURES END -->
             </div>
           </div>
-        </section>
-
-        <!-- ABOUT US END -->
-
-        <hr class="featurette-divider my-5" />
-
-        <!-- FOUNDERS SECTION START -->
-        <section class="text-center">
-          <h1 class="my-5">Nós</h1>
-          <div class="row">
-            <div class="col-lg-2 col-md-3 col-sm-4 ms-auto">
-              <img
-                src="../assets/img/carol.jpg"
-                class="rounded-circle"
-                width="100"
-                height="100"
-                role="img"
-                aria-label="Foto da Carol"
-              />
-              <p class="fs-6 mt-3">Caroline Nunes</p>
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4">
-              <img
-                src="../assets/img/ivan.jpg"
-                class="rounded-circle"
-                width="100"
-                height="100"
-                role="img"
-                aria-label="Foto do Ivan"
-              />
-              <p class="fs-6 mt-3">Ivan Ramos</p>
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4">
-              <img
-                src="../assets/img/sani.jpg"
-                class="rounded-circle"
-                width="100"
-                height="100"
-                role="img"
-                aria-label="Foto do Sani"
-              />
-              <p class="fs-6 mt-3">Luiz Henrique</p>
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4">
-              <img
-                src="https://avatars.githubusercontent.com/u/97912499?v=4"
-                class="rounded-circle"
-                width="100"
-                height="100"
-                role="img"
-                aria-label="Foto do Lorenzo"
-              />
-              <p class="fs-6 mt-3">Lorenzo Oliveira</p>
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4 me-auto">
-              <img
-                src="../assets/img/othon.jpg"
-                class="rounded-circle"
-                width="100"
-                height="100"
-                role="img"
-                aria-label="Foto do Lorenzo"
-              />
-              <p class="fs-6 mt-3">José Othon</p>
-            </div>
-          </div>
-        </section>
-        <!-- FOUNDERS SECTION END -->
-      </article>
+        </div>
+      </div>
     </main>
 
     <!-- FOOTER START -->
@@ -295,7 +208,10 @@
       <div class="container">
         <p class="float-end"><a href="#">Voltar ao topo</a></p>
         <p>
-          © 2024 EcoShield · <a href="#">Sobre</a> · <a href="#">Perguntas</a>
+          © 2024 EcoShield ·
+          <span href="./cotacao.html">Cotação</span> ·
+          <a href="./solucoes.html">Soluções</a> ·
+          <a href="./sobre.html">Sobre</a>
         </p>
       </div>
     </footer>
@@ -303,5 +219,5 @@
   </body>
 
   <script src="../js/universal.js"></script>
-  <script src="../js/sobre.js"></script>
+  <script src="../js/cotacao.js"></script>
 </html>
