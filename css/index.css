@@ -61,13 +61,15 @@ main {
 
 .banner-text-title {
     width: 80%;
-    align-items: flex-end;
+    align-items: flex-start;
     font-size: 80px;
     font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
 }
 
 /*---=| Video Pitch |=---*/
-.blue-text a{
+.blue-text a {
     text-decoration: none;
 }
 
@@ -95,7 +97,7 @@ main {
         font-size: 48px;
     }
 
-    .btn-contact-container{
+    .btn-contact-container {
         transform: translateX(-100%);
     }
 
@@ -114,7 +116,7 @@ main {
         font-size: 32px;
     }
 
-    .btn-contact-container{
+    .btn-contact-container {
         transform: translateX(-80%);
     }
 
